@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> topics practice </title>
+</head>
+<body>
+  <h1>Event Handling in dom </h1>
+
+  <button id="myButton">Click Me</button>
+  <p id="message"></p>
+
+  <script>
+    const button = document.getElementById('myButton');
+
+    button.addEventListener('click', function() {
+      const messageElement = document.getElementById('message');
+
+      messageElement.textContent = 'Button was clicked!';
+
+      button.style.backgroundColor = 'yellow';
+    });
+
+    button.addEventListener('mouseover', function() {
+      button.style.color = 'white';
+    });
+
+    button.addEventListener('mouseout', function() {
+      button.style.color = 'black';
+    });
+  </script>
+</body>
+</html>
+
+<script src="./app.js"></script>
+</html>
